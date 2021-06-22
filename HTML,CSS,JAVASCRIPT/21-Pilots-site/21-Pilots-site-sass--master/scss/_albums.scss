@@ -1,0 +1,165 @@
+.albums{
+    padding-bottom: 2rem;
+    &__profile-image{
+        height: 35vh;
+        width: 100%;
+        background:
+        linear-gradient(
+            to left,
+            rgba(black,0.9),
+            rgba(black,0.3)
+        ),
+         url(../img/beige.jpg) center no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        .tit{
+            font-size: 4rem;
+            margin-bottom: 3rem;
+            color: yellow;
+        }
+    }
+
+    &__cont{
+        margin: 2rem auto 0 auto;
+        width: 60vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
+
+    &__album{
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+
+        .pic{
+            height: 100%;
+            width: 100%;
+        }
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            height: 100%;
+            background: yellow;
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+            width: 50%;
+            opacity: 0;
+            @include transition-ease;
+        }
+
+        &.blurryface::before{
+            background: red;
+        }
+
+        &.vessel::before{
+            background: white;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 150%;
+            height: 100%;
+            background: yellow;
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            width: 50%;
+            opacity: 0;
+            @include transition-ease;
+        }
+
+        &.blurryface::after{
+            background: red;
+        }
+
+        &.vessel::after{
+            background: white;
+        }
+        &:hover{
+            &::before{
+                left: 0;
+                opacity: 0.9;
+            }
+            &::after{
+                left: 50%;
+                opacity: 0.9;
+            }
+            .albums__trackL{
+                opacity: 1;
+                color: yellow;
+                background: black;
+                font-weight: 700;
+                text-align: left;
+                padding-left: 1rem;
+                margin-left: 1rem;
+                width: 80%;
+                height: 2rem;
+
+            }
+
+            &.blurryface .albums__trackL{
+                color: red;
+            }
+            &.vessel .albums__trackL{
+                color: white;
+            }
+            .albums__trackR{
+                opacity: 1;
+                color: yellow;
+                background: black;
+                font-weight: 700;
+                text-align: left;
+                padding-left: 0.5rem;
+                margin-left: 1.5rem;
+                width: 80%;
+                height: 2rem;
+
+            }
+            &.blurryface .albums__trackR{
+                color: red;
+            }
+            &.vessel .albums__trackR{
+                color: white;
+            }
+        }
+    }
+    &__tracks{
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        align-items: center;
+        text-align: center;
+        
+    }
+    &__trackL{
+      opacity: 0;
+      @include transition-ease;
+    }
+    &__trackR{
+      opacity: 0;
+      @include transition-ease;
+    }
+
+    .social-icons{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    footer{
+        transform: 
+        rotate(90deg)
+        translate(-3rem,-4rem);
+    }
+
+}

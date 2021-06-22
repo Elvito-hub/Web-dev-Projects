@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids creator</title>
+    <style>
+        .tours{
+            padding-bottom: 2rem;
+        }
+
+        .tours__bio-image{
+            height: 30vh;
+            background: burlywood;
+        }
+        .tit{
+            text-align: center;
+            color: cornsilk;
+        }
+
+        .tours__items{
+            width: 60vw;
+            margin: 2rem auto 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 2rem;
+        }
+        .tours__item{
+            position: relative;
+            border-bottom: 5px solid orange;
+            overflow: hidden;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        img{
+            position: relative;
+            width: 100%;
+            height: 90%;
+            transition: 5s;
+            background-color: orangered;
+        }
+        .date{
+            position: absolute;
+            text-align: center;
+            top: 70px;
+            left: 170px;
+            transition: 0.5s;
+            
+        }
+
+        .tours__item::after{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: orange;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        img:hover{
+    
+                transform: rotate(720deg);
+                .date {
+                    opacity: 0;
+                }
+
+        }
+
+        .tours__item:hover{
+            
+            
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <section class="tours">
+        <div class="tours__bio-image">
+            <h1 class="tit">My Tours</h1>
+        </div>
+
+        <div class="tours__items">
+            <div class="tours__item">
+                <h1 class="loc"></h1>
+                <img src="img/concertvenue1.jpg" alt="My tour" class="photo">
+                <h1 class="date">21st July</h1>
+   
+                <div class="tours__info">
+                    <div class="logo">
+                        <img src="img/grid.png" alt="" class="logocont">
+                        <h1 class="askbook">Book here</h1>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tours__item">
+                <img src="img/grid.png" alt="My tour">
+
+                <h1 class="date">21st July</h1>
+
+                <div class="tours__info">
+                    <h2>New York 1st Av</h2>
+                </div>
+
+            </div>
+            <div class="tours__item">
+                <img src="img/grid.png" alt="My tour">
+
+                <h1 class="date">21st July</h1>
+
+                <div class="tours__info">
+                    <h2>New York 1st Av</h2>
+                </div>
+
+            </div>
+            <div class="tours__item">
+                <img src="img/grid.png" alt="My tour">
+
+                <h1 class="date">21st July</h1>
+
+                <div class="tours__info">
+                    <h2>New York 1st Av</h2>
+                </div>
+
+            </div>
+            <div class="tours__item">
+                <img src="img/grid.png" alt="My tour">
+
+                <h1 class="date">21st July</h1>
+
+                <div class="tours__info">
+                    <h2>New York 1st Av</h2>
+                </div>
+
+            </div>
+            <div class="tours__item">
+                <img src="img/grid.png" alt="My tour">
+  
+                <h1 class="date">21st July</h1>
+
+                <div class="tours__info">
+                    <h2>New York 1st Av</h2>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>

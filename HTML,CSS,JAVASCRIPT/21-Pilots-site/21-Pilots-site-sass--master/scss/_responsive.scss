@@ -1,0 +1,107 @@
+@include media-md{
+    .menu-btn{
+        visibility: hidden;
+    }
+    .nav{
+        visibility: visible;
+    
+    .menu-nav{
+        display: block;
+        transform: translateY(0);
+        height: 100%;
+        background: black;
+        text-align: right;
+
+        &__item{
+            display: inline;
+            
+            padding-right: 1.5rem;
+        }
+        &__link{
+            font-size: 2rem;
+            color: yellow;
+        }
+    }
+}
+.home{
+
+
+}
+.gallery{
+    .row{
+        .column{
+            flex: 30%;
+            max-width: 30%;
+            margin-left: 10px;
+        }
+    }
+}
+
+.tours{
+    &__items{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+
+.albums{
+
+    &__cont{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+
+}
+
+
+
+
+
+
+@include media-lg{
+.home{
+.music-player{
+    grid-template-columns: repeat(2 , 1fr);
+    margin-top: 2rem;
+    width: 80vw;
+    &__disk{
+        .player{
+            left: 48%;
+            top: 45.3%;
+            font-size: 3rem;
+            color: yellow;
+        }
+    }
+
+    &__playlist{
+        grid-gap: 0;
+
+    }
+}
+
+}
+.gallery{
+    .row{
+        margin-left: 5rem;
+        .column{
+            flex: 20%;
+            max-width: 20%;
+            margin-left: 1rem;
+ 
+        }
+    }
+}
+
+.tours{
+    &__items{
+        grid-template-columns: repeat(3 , 1fr);
+    }
+}
+
+.albums{
+
+    &__cont{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+
+}
